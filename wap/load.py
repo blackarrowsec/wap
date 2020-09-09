@@ -78,7 +78,7 @@ def load_apps(json_dict) -> Tuple[Dict[str, Technology], Dict[str, Category]]:
             cookies=_transform_patterns(techno.get("cookies", None)),
             html=_transform_patterns(techno.get("html", None)),
             meta=_transform_patterns(techno.get("meta", None)),
-            scripts=_transform_patterns(techno.get("script", None)),
+            scripts=_transform_patterns(techno.get("scripts", None)),
             js=_transform_patterns(techno.get("js", None), True),
             implies=[
                 Imply(name=pt.value, confidence=pt.confidence)
