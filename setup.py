@@ -33,6 +33,10 @@ setuptools.setup(
     description="Library to parse wappalyzer technologies.json and "
     "extracts matches from HTTP responses",
     url="https://github.com/blackarrowsec/wap",
+    project_urls={
+        "Repository": "https://github.com/blackarrowsec/wap",
+        "Documentation": "https://wap.readthedocs.io",
+    },
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
