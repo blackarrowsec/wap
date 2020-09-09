@@ -92,7 +92,7 @@ def load_apps(json_dict) -> Tuple[Dict[str, Technology], Dict[str, Category]]:
             website=techno.get("website", ""),
             cpe=techno.get("cpe", ""),
         )
-        for name, techno in json_dict["apps"].items()
+        for name, techno in json_dict["technologies"].items()
     }
 
     return (technologies, categories)
