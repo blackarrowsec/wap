@@ -32,6 +32,7 @@ setuptools.setup(
     author_email="eloy.perez@tarlogic.com",
     description="Library to parse wappalyzer technologies.json and "
     "extracts matches from HTTP responses",
+    url="https://github.com/blackarrowsec/wap",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(),
