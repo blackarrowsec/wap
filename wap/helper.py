@@ -13,7 +13,7 @@ def discover_requests_technologies(
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> t_matches = wap.discover_requests_technologies(techs, resp)
     """

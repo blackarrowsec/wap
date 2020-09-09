@@ -22,7 +22,7 @@ def discover_technologies(
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> resp_attrs = wap.parse_requests_response(resp)
         >>> techno_matches = wap.discover_technologies(techs, **resp_attrs)
@@ -55,7 +55,7 @@ def match_all(
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> resp_attrs = wap.parse_requests_response(resp)
         >>> pattern_matches = wap.match_all(techs, **resp_attrs)
@@ -100,7 +100,7 @@ def match_url(technology: Technology, url: str) -> Iterator[PatternMatch]:
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> pattern_matches = []
         >>> for tech in techs.values():
@@ -116,7 +116,7 @@ def match_html(technology: Technology, html: str) -> Iterator[PatternMatch]:
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> pattern_matches = []
         >>> for tech in techs.values():
@@ -135,7 +135,7 @@ def match_scripts(
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> scripts = wap.extract_scripts(resp.text)
         >>> pattern_matches = []
@@ -164,7 +164,7 @@ def match_cookies(
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> cookies = wap.parse_requests_headers(resp.cookies)
         >>> pattern_matches = []
@@ -184,7 +184,7 @@ def match_metas(
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> metas = wap.extract_metas(resp.text)
         >>> pattern_matches = []
@@ -204,7 +204,7 @@ def match_headers(
     Example:
         >>> import wap
         >>> import requests
-        >>> techs, _ = wap.load_file("apps.json")
+        >>> techs, _ = wap.load_file("technologies.json")
         >>> resp = requests.get("https://www.github.com")
         >>> headers = wap.parse_requests_headers(resp.headers)
         >>> pattern_matches = []

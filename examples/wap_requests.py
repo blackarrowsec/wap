@@ -14,7 +14,7 @@ def parse_args():
     parser.add_argument(
         "--file",
         help="File with apps regexps",
-        default="apps.json"
+        default="technologies.json"
     )
 
     parser.add_argument(
