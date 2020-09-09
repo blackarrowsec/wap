@@ -10,6 +10,12 @@ Functionality is similar to the [wappalyzer core module](https://github.com/Alia
 
 ## Installation
 
+From pypi:
+```shell
+pip3 install wap
+```
+
+From repo:
 ```shell
 git clone https://github.com/blackarrowsec/wap
 cd wap/
