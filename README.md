@@ -44,6 +44,9 @@ for t in techno_matches:
 
 More examples in examples folder.
 
+## Documentation
+Documentation can be found in https://wap.readthedocs.io. 
+
 
 ## Adding new technologies
 
