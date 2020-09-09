@@ -30,7 +30,7 @@ setuptools.setup(
     version=version,
     author="Eloy Perez",
     author_email="eloy.perez@tarlogic.com",
-    description="Library to parse wappalyzer apps.json and "
+    description="Library to parse wappalyzer technologies.json and "
     "extracts matches from HTTP responses",
     long_description=long_description,
     long_description_content_type="text/markdown",

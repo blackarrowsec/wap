@@ -7,20 +7,20 @@ import re
 def load_file(
         filepath: str
 ) -> Tuple[Dict[str, Technology], Dict[str, Category]]:
-    """Loads the contents of an apps.json_ file indicated by the path.
+    """Loads the contents of an technologies.json_ file indicated by the path.
 
     Args:
-        filepath (str): Path of the apps.json_ file.
+        filepath (str): Path of the technologies.json_ file.
 
     Returns:
         Tuple[Dict[str, Technology], Dict[str, Category]]: A tuple with the
-            technologies and the categories defined in apps.json_.
+            technologies and the categories defined in technologies.json_.
 
     Example:
         >>> import wap
-        >>> techs, cats = wap.load_file("apps.json")
+        >>> techs, cats = wap.load_file("technologies.json")
 
-    .. _apps.json: https://github.com/AliasIO/wappalyzer/blob/master/src/apps.json
+    .. _technologies.json: https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json
     """
     with open(filepath) as json_file:
         return load_stream(json_file)
@@ -29,31 +29,31 @@ def load_file(
 def load_stream(
         stream: TextIO
 ) -> Tuple[Dict[str, Technology], Dict[str, Category]]:
-    """Loads the contents of an apps.json_ already opened.
+    """Loads the contents of an technologies.json_ already opened.
 
     Args:
-        stream (TextIO): A stream of the apps.json_ content.
+        stream (TextIO): A stream of the technologies.json_ content.
 
     Returns:
         Tuple[Dict[str, Technology], Dict[str, Category]]: A tuple with the
-            technologies and the categories defined in apps.json_.
+            technologies and the categories defined in technologies.json_.
 
     Example:
         >>> import wap
-        >>> techs, cats = wap.load_stream(open("apps.json"))
+        >>> techs, cats = wap.load_stream(open("technologies.json"))
 
-    .. _apps.json: https://github.com/AliasIO/wappalyzer/blob/master/src/apps.json
+    .. _technologies.json: https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json
     """
     json_dict = json.load(stream)
     return load_apps(json_dict)
 
 
 def load_apps(json_dict) -> Tuple[Dict[str, Technology], Dict[str, Category]]:
-    """Parses the object generated from the json definition in apps.json_ and
+    """Parses the object generated from the json definition in technologies.json_ and
     returns the technologies and the categories.
 
     Args:
-        json_dict : A object representing the json content of apps.json_, for
+        json_dict : A object representing the json content of technologies.json_, for
             example loaded with the `json.load` function.
 
     Returns:
@@ -64,9 +64,9 @@ def load_apps(json_dict) -> Tuple[Dict[str, Technology], Dict[str, Category]]:
     Example:
         >>> import json
         >>> import wap
-        >>> techs, cats = wap.load_apps(json.load(open("apps.json")))
+        >>> techs, cats = wap.load_apps(json.load(open("technologies.json")))
 
-    .. _apps.json: https://github.com/AliasIO/wappalyzer/blob/master/src/apps.json
+    .. _technologies.json: https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json
     """
     categories = load_categories(json_dict["categories"])
     technologies = {
@@ -100,11 +100,11 @@ def load_apps(json_dict) -> Tuple[Dict[str, Technology], Dict[str, Category]]:
 
 def load_categories(json_dict) -> Dict[str, Category]:
     """Parses the object generated from the json definition of the categories
-    section of apps.json_ and returns the categories.
+    section of technologies.json_ and returns the categories.
 
     Args:
         json_dict : A object representing the json content of the categories
-            section of apps.json_, for example loaded with the `json.load`
+            section of technologies.json_, for example loaded with the `json.load`
             function.
 
     Returns:
@@ -113,9 +113,9 @@ def load_categories(json_dict) -> Dict[str, Category]:
     Example:
         >>> import json
         >>> import wap
-        >>> cats = wap.load_categories(json.load(open("apps.json"))["categories"])
+        >>> cats = wap.load_categories(json.load(open("technologies.json"))["categories"])
 
-    .. _apps.json: https://github.com/AliasIO/wappalyzer/blob/master/src/apps.json
+    .. _technologies.json: https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json
     """
     return {
         id_: Category(

@@ -10,15 +10,15 @@ class Category:
     """A category to classify technologies in groups. Examples or categories
     are "CMS", "Javascript frameworks", "Web servers", etc.
 
-    The exhaustive list of categories is defined in the apps.json_ file in
+    The exhaustive list of categories is defined in the technologies.json_ file in
     the wappalyzer repository.
 
     Attributes:
-        id_ (str): The identifier of category in apps.json_.
+        id_ (str): The identifier of category in technologies.json_.
         name (str): The name of the category (e.g CMS).
         priority (int)
 
-    .. _apps.json: https://github.com/AliasIO/wappalyzer/blob/master/src/apps.json
+    .. _technologies.json: https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json
 
     """
 
@@ -93,7 +93,7 @@ class Pattern:
 
 class Technology:
     """Definition of a technology and all of its rules that is extracted
-    from apps.json_ file.
+    from technologies.json_ file.
 
     Attributes:
         name (str)
@@ -134,7 +134,7 @@ class Technology:
         cpe (str):
 
 
-    .. _apps.json: https://github.com/AliasIO/wappalyzer/blob/master/src/apps.json
+    .. _technologies.json: https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json
     .. _icons: https://github.com/AliasIO/wappalyzer/tree/master/src/drivers/webextension/images/icons
     """
 

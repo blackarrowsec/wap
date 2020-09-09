@@ -1,5 +1,5 @@
 """
-Library to parse wappalyzer apps.json and extracts matches from HTTP responses.
+Library to parse wappalyzer technologies.json_ and extracts matches from HTTP responses.
 
 
 The following examples shows how to use it in conjuction with requests and bs4
@@ -12,7 +12,7 @@ in order to get the technologies of "https://www.github.com":
    import wap
 
 
-   technologies, categories = wap.load_file("apps.json")
+   technologies, categories = wap.load_file("technologies.json")
    resp = requests.get("https://www.github.com")
    techno_matches = wap.discover_requests_technologies(technologies, resp)
 
@@ -30,6 +30,8 @@ in order to get the technologies of "https://www.github.com":
     if __name__ == '__main__':
         main()
 
+
+.. _technologies.json: https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json
 """
 
 from .load import load_file, load_stream, load_apps, load_categories

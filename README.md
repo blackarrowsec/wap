@@ -2,7 +2,7 @@
 [![](https://img.shields.io/badge/Category-Library-E5A505?style=flat-square)]() [![](https://img.shields.io/badge/Language-Python-E5A505?style=flat-square)]()
 
 Library to parse [Wappalyzer](https://wappalyzer.com) 
-[apps.json](https://github.com/AliasIO/wappalyzer/blob/master/src/apps.json)
+[technologies.json](https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json)
 and use its rules to discover web technologies by looking in the HTTP responses.
 
 Functionality is similar to the [wappalyzer core module](https://github.com/AliasIO/wappalyzer/blob/master/src/wappalyzer.js), but in python.
@@ -25,7 +25,7 @@ import requests
 import wap
 
 
-technologies, categories = wap.load_file("apps.json")
+technologies, categories = wap.load_file("technologies.json")
 resp = requests.get("https://www.github.com")
 techno_matches = wap.discover_requests_technologies(technologies, resp)
 
@@ -48,7 +48,7 @@ More examples in examples folder.
 ## Adding new technologies
 
 If you want that wap detects a new technology, you can add your rules to the 
-[apps.json](https://github.com/AliasIO/wappalyzer/blob/master/src/apps.json) 
+[technologies.json](https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json) 
 file and load it with wap. 
 
 Please, consider to do a pull request to 
@@ -56,7 +56,7 @@ Please, consider to do a pull request to
 and share your rules with the community. Follow the rules in 
 [Adding a new technology](https://www.wappalyzer.com/docs/dev/contributing#adding-a-new-technology).
 
-Please do not submit pull requests related to apps.json, since this repository is 
+Please do not submit pull requests related to technologies.json, since this repository is 
 not related with Wappalyzer.
 
 ## Author
