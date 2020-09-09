@@ -31,6 +31,8 @@ in order to get the technologies of "https://www.github.com":
         main()
 
 
+For more examples, look in the `repository examples folder <https://github.com/blackarrowsec/wap/tree/master/examples>`_.
+
 .. _technologies.json: https://github.com/AliasIO/wappalyzer/blob/master/src/technologies.json
 """
 
