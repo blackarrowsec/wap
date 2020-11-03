@@ -272,10 +272,18 @@ def match_pairs(
         Iterator[PatternMatch]: An iterator with the found matches.
 
     """
+
+    if field in ["cookies"]:
+        pairs_local = {}
+        for k in pairs:
+            pairs_local[k.lower()] = pairs[k]
+    else:
+        pairs_local = pairs
+
     for key in tech[field]:
         # get patterns this way since pairs could be a dict or empty list
         patterns = tech[field][key] or []
-        values = pairs.get(key, [])
+        values = pairs_local.get(key, [])
 
         for value in values:
             yield from _match_patterns(patterns, tech, value)
