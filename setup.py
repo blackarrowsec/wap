@@ -12,7 +12,7 @@ command_options = {}
 
 
 name = "wap"
-version = "0.0.1"
+version = "0.0.2"
 
 if sys.argv[-1] == "doc":
     # require sphinx only in case of doc command
